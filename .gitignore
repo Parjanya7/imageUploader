@@ -1,5 +1,8 @@
-node_modules/
+#Ignoring Node Modules
+node_modules
 
+#Ignoring env files
 .env
 
+#Ignoring production build for react-app
 build

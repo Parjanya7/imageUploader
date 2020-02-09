@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap');
+
+#welcomeUser {
+    height: 100px;
+    background-color: dodgerblue; 
+    margin-top: 0rem; 
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    color: bisque;
+    justify-content: space-between;
+    line-height: 100px;
+}
+
+#logout {
+    float: right;
+    margin-right: 1rem;
+    line-height: inherit;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(2, 140, 186, 2);
+}

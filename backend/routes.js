@@ -8,8 +8,12 @@ module.exports = (app) => {
     const fileUpload = require('express-fileupload');
     app.use(fileUpload());
 
-    app.use('/login', loginRouter);
-    app.use('/current', currentUserRouter);
-    app.use('/imageUpload', imageUploaderRouter);
-    app.use('/getImages', imageGetterRouter);
+    //============== Public Routes =========================================
+    app.use('/login', loginRouter);                     // Login and basic validations
+
+    //============== Protected Routes =========================================
+
+    app.use('/current', currentUserRouter);             // Current user validation 
+    app.use('/imageUpload', imageUploaderRouter);       // Uploading images to S3
+    app.use('/getImages', imageGetterRouter);           // Request for Getting images from S3
 };

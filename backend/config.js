@@ -1,22 +1,22 @@
 module.exports = {
 
-    PORT: process.env.PORT || 4000,
+    PORT: process.env.PORT || 4000, // PORT
 
-    middleWare: (app, express, bodyParser) => {
+    middleWare: (app, express, bodyParser) => {  // Middleware configuration 
 
         app.use(express.json());
         app.use(bodyParser.urlencoded({ extended: true }));
         app.use(bodyParser.json());
     },
 
-    ROUTES: (app) => {
+    ROUTES: (app) => {  // Accessing Routes 
 
         const routes = require('./routes');
 
         routes(app);
     },
 
-    mongoConnect: (mongoose) => {
+    mongoConnect: (mongoose) => {  // Connecting to MongoDB
 
         mongoose.set('useNewUrlParser', true);
         mongoose.set('useFindAndModify', false);
@@ -32,15 +32,14 @@ module.exports = {
         });
     },
 
-    production: (express, app, path) => {
+    production: (express, app, path) => { // Providing production build configuration
 
         if(process.env.NODE_ENV === 'production') {
 
             app.use(express.static(path.resolve(__dirname, '../', 'frontend', 'build')));
-            
+
             app.get('*', (req, res) => {
-                
-                res.sendFile(path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')); 
+                res.sendFile(path.resolve(__dirname, '../', 'frontend', 'build', 'index.html'));  // Render index.html in production environment
             });
         }
     }

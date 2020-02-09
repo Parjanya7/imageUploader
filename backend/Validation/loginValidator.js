@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
     if(req.body.password === '')
         errors.password = 'Password cannot be empty'        
 
-    //Other validations can also be added. Also when registering a new user.
+    //Other validations can also be added. Majorly when registering a new user.
 
     if(Object.keys(errors).length !== 0)
         return res.json(errors);

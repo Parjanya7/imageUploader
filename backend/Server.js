@@ -7,9 +7,9 @@ require('dotenv').config();
 
 const app = express();
 
-config.middleWare(app, express, bodyParser);
-config.mongoConnect(mongoose);
-config.ROUTES(app);
-config.production(express, app, path);
+config.middleWare(app, express, bodyParser);      // Middleware configuration 
+config.mongoConnect(mongoose);                    // MongoDB Connection
+config.ROUTES(app);                               // Routes configuration
+config.production(express, app, path);            // Production build configuration
 
 app.listen(config.PORT, () => console.log(`Server Running on ${config.PORT}`));

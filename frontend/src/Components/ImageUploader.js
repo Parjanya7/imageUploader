@@ -10,7 +10,6 @@ const ImageUploader = (props) => {
     const [name, setName] = useState('Choose Image');
     const [uploaded, setUploaded] = useState(false);
     const [uploadMsg, setUploadMsg] = useState(''); 
-    const [perc, setPerc] = useState(0);
 
     const uploadFile = (e) => {
 

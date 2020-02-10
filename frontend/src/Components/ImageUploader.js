@@ -10,6 +10,7 @@ const ImageUploader = (props) => {
     const [name, setName] = useState('Choose Image');
     const [uploaded, setUploaded] = useState(false);
     const [uploadMsg, setUploadMsg] = useState(''); 
+    const [perc, setPerc] = useState(0);
 
     const uploadFile = (e) => {
 
@@ -62,7 +63,7 @@ const ImageUploader = (props) => {
             <div style = {{marginTop:'0rem'}}>
                 {
                     uploadMsg ?
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <div class="alert alert-info alert-dismissible fade show" role="alert" style = {{textAlign:'center'}}>
                         <strong>{ uploadMsg }</strong>
                         <button type="button" class="close" onClick = { afunc } data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>

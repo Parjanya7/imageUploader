@@ -24,7 +24,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.11",
     "nodemon": "^2.0.2",
-    "sharp": "^0.24.0",
+    "sharp": "^0.30.5",
     "validator": "^12.2.0"
   }
 }
